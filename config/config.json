@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "panda-quotes-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pandaQuotes/PandaQuotesWebPart.js",
+          "manifest": "./src/webparts/pandaQuotes/PandaQuotesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PandaQuotesWebPartStrings": "lib/webparts/pandaQuotes/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "panda-quotes-client-side-solution",
+    "id": "dbaf7321-4b45-4bb7-9ca0-894d9f015415",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.24.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "panda-quotes description"
+      },
+      "longDescription": {
+        "default": "panda-quotes description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "panda-quotes Feature",
+        "description": "The feature that activates elements of the panda-quotes solution.",
+        "id": "adc752b5-f973-4156-8bc4-61ea20d2c036",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/panda-quotes.sppkg"
+  }
+}
