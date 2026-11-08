@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "panda-quotes-client-side-solution",
+    "name": "panda-quotes-solution",
     "id": "dbaf7321-4b45-4bb7-9ca0-894d9f015415",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
@@ -15,10 +15,10 @@
     },
     "metadata": {
       "shortDescription": {
-        "default": "panda-quotes description"
+        "default": "Panda Quotes Carousel"
       },
       "longDescription": {
-        "default": "panda-quotes description"
+        "default": "Carousel of your fav quotes"
       },
       "screenshotPaths": [],
       "videoUrl": "",

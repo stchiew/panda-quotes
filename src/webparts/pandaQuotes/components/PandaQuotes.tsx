@@ -2,17 +2,14 @@ import * as React from 'react';
 import styles from './PandaQuotes.module.scss';
 import type { IPandaQuotesProps } from './IPandaQuotesProps';
 import { escape } from '@microsoft/sp-lodash-subset';
-import welcomeDark from '../assets/welcome-dark.png';
-import welcomeLight from '../assets/welcome-light.png';
 
-export default class PandaQuotes extends React.Component<IPandaQuotesProps> {
-  public render(): React.ReactElement<IPandaQuotesProps> {
+const PandaQuotes:React.FC<IPandaQuotesProps> = (props) => {
+  
     const {
       description,
-      isDarkTheme,
       environmentMessage,
       userDisplayName
-    } = this.props;
+    } = props;
 
     return (
       <section className={`${styles.pandaQuotes}`}>
@@ -27,4 +24,5 @@ export default class PandaQuotes extends React.Component<IPandaQuotesProps> {
       </section>
     );
   }
-}
+
+  export default PandaQuotes;
