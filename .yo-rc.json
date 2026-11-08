@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.23.2",
+    "sdksVersions": {},
+    "version": "1.24.0",
+    "libraryName": "panda-quotes",
+    "libraryId": "dbaf7321-4b45-4bb7-9ca0-894d9f015415",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "panda-quotes",
+    "solutionShortDescription": "panda-quotes description",
+    "skipFeatureDeployment": true,
+    "componentType": "webpart"
+  }
+}
