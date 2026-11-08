@@ -3,4 +3,7 @@ export interface IPandaQuotesProps {
   isDarkTheme: boolean;
   environmentMessage: string;
   userDisplayName: string;
+  choiceGroup: string;
+  toggle: boolean;
+  slider: number;
 }

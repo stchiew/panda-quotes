@@ -11,6 +11,13 @@ define([], function() {
     "AppTeamsTabEnvironment": "The app is running in Microsoft Teams",
     "AppOfficeEnvironment": "The app is running in office.com",
     "AppOutlookEnvironment": "The app is running in Outlook",
-    "UnknownEnvironment": "The app is running in an unknown environment"
+    "UnknownEnvironment": "The app is running in an unknown environment",
+    "ChoiceGroupFieldLabel": "Choice Group Label",
+    "ToggleFieldLabel": "Toggle Label",
+    "SliderFieldLabel": "Slider Label",
+    "Choice1": "Choice 1",
+    "Choice2": "Choice 2",
+    "ToggleOnText": "It is On",
+    "ToggleOffText": "It is Off"
   }
 });

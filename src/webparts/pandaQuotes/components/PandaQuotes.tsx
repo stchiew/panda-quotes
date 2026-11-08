@@ -8,7 +8,10 @@ const PandaQuotes:React.FC<IPandaQuotesProps> = (props) => {
     const {
       description,
       environmentMessage,
-      userDisplayName
+      userDisplayName,
+      choiceGroup,
+      toggle,
+      slider
     } = props;
 
     return (
@@ -19,6 +22,9 @@ const PandaQuotes:React.FC<IPandaQuotesProps> = (props) => {
           <div>{environmentMessage}</div>
           <div>Web part property value: <strong>{escape(description)}</strong></div>
           <div>Panda Quotes!</div>
+          <div>Choice Group: <strong>{escape(choiceGroup)}</strong></div>
+          <div>Toggle: <strong>{toggle ? 'On' : 'Off'}</strong></div>
+          <div>Slider: <strong>{slider}</strong></div>
         </div>
        
       </section>
