@@ -3,7 +3,10 @@ import { createRoot, type Root } from 'react-dom/client';
 import { Version } from '@microsoft/sp-core-library';
 import {
   type IPropertyPaneConfiguration,
-  PropertyPaneTextField
+  PropertyPaneChoiceGroup,
+  PropertyPaneSlider,
+  PropertyPaneTextField,
+  PropertyPaneToggle
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
@@ -14,6 +17,9 @@ import { IPandaQuotesProps } from './components/IPandaQuotesProps';
 
 export interface IPandaQuotesWebPartProps {
   description: string;
+  choiceGroup: string;
+  toggle: boolean;
+  slider: number;
 }
 
 export default class PandaQuotesWebPart extends BaseClientSideWebPart<IPandaQuotesWebPartProps> {
@@ -29,7 +35,10 @@ export default class PandaQuotesWebPart extends BaseClientSideWebPart<IPandaQuot
         description: this.properties.description,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        choiceGroup: this.properties.choiceGroup,
+        toggle: this.properties.toggle,
+        slider: this.properties.slider
       }
     );
 
@@ -45,8 +54,6 @@ export default class PandaQuotesWebPart extends BaseClientSideWebPart<IPandaQuot
       this._environmentMessage = message;
     });
   }
-
-
 
   private _getEnvironmentMessage(): Promise<string> {
     if (!!this.context.sdks.microsoftTeams) { // running in Teams, office.com or Outlook
@@ -115,6 +122,30 @@ export default class PandaQuotesWebPart extends BaseClientSideWebPart<IPandaQuot
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
+                }),
+                PropertyPaneChoiceGroup('choiceGroup', {
+                  label: strings.ChoiceGroupFieldLabel,
+                  options: [
+                    {
+                      key: 'option1',
+                      text: strings.Choice1
+                    },
+                    {
+                      key: 'option2',
+                      text: strings.Choice2
+                    }
+                  ]
+                }),
+                PropertyPaneSlider('slider', {
+                  label: strings.SliderFieldLabel,
+                  min: 0,
+                  max: 100,
+                  step: 1
+                }),
+                PropertyPaneToggle('toggle', {
+                  label: strings.ToggleFieldLabel,
+                  onText: strings.ToggleOnText,
+                  offText: strings.ToggleOffText
                 })
               ]
             }

@@ -11,6 +11,13 @@ declare interface IPandaQuotesWebPartStrings {
   AppOfficeEnvironment: string;
   AppOutlookEnvironment: string;
   UnknownEnvironment: string;
+  ChoiceGroupFieldLabel: string;
+  ToggleFieldLabel: string;
+  SliderFieldLabel: string;
+  Choice1: string;
+  Choice2: string;
+  ToggleOnText: string;
+  ToggleOffText: string;
 }
 
 declare module 'PandaQuotesWebPartStrings' {
